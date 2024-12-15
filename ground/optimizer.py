@@ -2,7 +2,7 @@
 import tensorflow as tf 
 
 class FastWeights:
-    def __init__(self, model, lr = 0.01):
+    def __init__(self, model, lr = 0.001):
         """For the MAML implementation we need an optimizer that can apply SGD using the weights of one 
         neural net to another neural net. This optimizer can apply gradients and compute a forward pass in one 
         go,to compute updated forward pass as easy as possible. Always coupled to one specific neural net that 

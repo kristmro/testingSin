@@ -1,7 +1,6 @@
 import tensorflow as tf
 from deployable import DeployableModel
 
-
 class Model(DeployableModel):
     def __init__(self, model, taskDistribution, lossfn='mse', outerLearningRate=0.001, innerLearningRate=0.01):
         """Super class for models in this library: Initializes from disk or from a tensorflow layers model.
