@@ -131,3 +131,7 @@ dmypy.json
 models/*
 backup.git
 
+package-lock.json
+node_modules/
+savedModels/converted_model/
+package.json
