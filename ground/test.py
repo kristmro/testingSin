@@ -6,7 +6,7 @@ from tasks import SinusoidRegressionTaskDistribution
 import argparse
 import tensorflow as tf
 
-
+#tf.config.run_functions_eagerly(True)  # Enable eager execution
 
 def main(name, method, nBatch, nTasks, nSamples, nEpochs, useLargerNetwork, savePreliminary):
     model = tf.keras.models.Sequential([

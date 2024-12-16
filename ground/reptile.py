@@ -6,7 +6,7 @@ class Reptile(Model):
         super().__init__(*args, **kwargs)
         self.nInnerSteps = nInnerSteps
         self.interpolationRateInitial = self.outerLearningRate
-        self.sgd = tf.keras.optimizers.SGD(self.innerLearningRate)
+        self.sgd = tf.keras.optimizers.Adam(self.innerLearningRate)
         self.modelCopy = tf.keras.models.clone_model(self.model)
 
     @tf.function
