@@ -42,7 +42,7 @@ def main(name, method, nBatch, nTasks, nSamples, nEpochs, useLargerNetwork, save
 
         # Last log is the final model so just drop the epoch
         if epoch < nEpochs - 1:
-            if savePreliminary:
+            if savePreliminary and epoch % 10 == 0:
                 metaModel.saveKeras('./models/' + name + ('_epoch_' + str(epoch)))
         else:
             metaModel.saveKeras('./models/' + name)
